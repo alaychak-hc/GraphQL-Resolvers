@@ -9,7 +9,7 @@
     Email: ALaychak@harriscomputer.com
 
     Created At: 02-24-2022 02:18:05 PM
-    Last Modified: 02-24-2022 02:18:14 PM
+    Last Modified: 02-25-2022 09:57:20 AM
     Last Updated By: Andrew Laychak
 
     Description: Resolver that handles retrieving Groups from the database
@@ -22,12 +22,13 @@
 // #endregion
 
 // #region Imports
-import { Args, Mutation } from 'type-graphql';
+import { Args, Ctx, Mutation } from 'type-graphql';
 import { Resolver } from 'type-graphql/dist/decorators/Resolver';
 import { FileUploadArgs } from '@arguments/All';
 import { ensureDirSync, createWriteStream } from 'fs-extra';
 import path from 'path';
 import logManager from '@alaychak-hc/log-manager';
+import { ApolloError } from 'apollo-server-express';
 // #endregion
 
 // #region File Upload Resolver
@@ -66,7 +67,10 @@ export class FileUploadResolver {
     } catch (e) {
       logManager.error(`ERROR SAVING FILE: ${(e as Error).message}`);
 
-      return false;
+      throw new ApolloError(
+        `ERROR SAVING FILE: ${(e as Error).message}`,
+        '500'
+      );
     }
 
     return true;
