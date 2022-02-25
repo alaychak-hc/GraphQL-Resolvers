@@ -9,7 +9,7 @@
     Email: ALaychak@harriscomputer.com
 
     Created At: 02-24-2022 02:18:05 PM
-    Last Modified: 02-25-2022 09:57:20 AM
+    Last Modified: 02-25-2022 11:55:28 AM
     Last Updated By: Andrew Laychak
 
     Description: Resolver that handles retrieving Groups from the database
@@ -22,7 +22,7 @@
 // #endregion
 
 // #region Imports
-import { Args, Ctx, Mutation } from 'type-graphql';
+import { Args, Mutation } from 'type-graphql';
 import { Resolver } from 'type-graphql/dist/decorators/Resolver';
 import { FileUploadArgs } from '@arguments/All';
 import { ensureDirSync, createWriteStream } from 'fs-extra';

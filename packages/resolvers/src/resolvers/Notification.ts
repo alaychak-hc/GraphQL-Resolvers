@@ -9,7 +9,7 @@
     Email: ALaychak@harriscomputer.com
 
     Created At: 02-24-2022 02:54:13 PM
-    Last Modified: 02-24-2022 03:00:06 PM
+    Last Modified: 02-25-2022 11:50:19 AM
     Last Updated By: Andrew Laychak
 
     Description: Resolver that handles notifications
@@ -26,7 +26,6 @@ import {
   Mutation,
   PubSub,
   PubSubEngine,
-  ResolverFilterData,
   Root,
   Subscription,
 } from 'type-graphql';
@@ -42,6 +41,7 @@ export class NotificationResolver {
     topics: ({ args }) => (args as NotificationArgs).topic ?? '',
   })
   notificationSubscribe(
+    @Args() { topic: _topic }: NotificationArgs,
     @Root() { NOTIFICATION_ID, MESSAGE, CREATED_AT }: Notification
   ): Notification {
     return {
