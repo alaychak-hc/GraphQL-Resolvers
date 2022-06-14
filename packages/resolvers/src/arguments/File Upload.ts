@@ -5,8 +5,8 @@
     Email: ALaychak@harriscomputer.com
 
     Created At: 02-24-2022 02:56:35 PM
-    Last Modified: 02-24-2022 02:56:42 PM
-    Last Updated By: Andrew Laychak
+    Last Modified: 06-14-2022 03:29:40 PM
+    Last Updated By: Xlantra1
 
     Description: Arguments for the file upload resolver
 
@@ -17,7 +17,8 @@
 // #endregion
 
 // #region Imports
-import { GraphQLUpload, FileUpload } from 'graphql-upload';
+import { AntDesignFileUploadScalar } from '@alaychak-hc/graphql-scalars';
+import { UploadedFileDetails } from '../types/All';
 import { ArgsType, Field } from 'type-graphql';
 // #endregion
 
@@ -27,14 +28,23 @@ import { ArgsType, Field } from 'type-graphql';
  */
 @ArgsType()
 class FileUploadArgs {
-  @Field(() => GraphQLUpload, {
+  @Field(() => AntDesignFileUploadScalar, {
     name: 'file',
     description: 'The file to be upload',
   })
-  file!: FileUpload;
+  file!: UploadedFileDetails;
+}
+
+@ArgsType()
+class FileUploadMultiArgs {
+  @Field(() => [AntDesignFileUploadScalar], {
+    name: 'files',
+    description: 'The files to be upload',
+  })
+  files!: UploadedFileDetails[];
 }
 // #endregion
 
 // #region Exports
-export default FileUploadArgs;
+export { FileUploadArgs, FileUploadMultiArgs };
 // #endregion

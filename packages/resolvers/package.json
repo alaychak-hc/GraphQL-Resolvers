@@ -57,6 +57,7 @@
     "@src/*": "src/*"
   },
   "dependencies": {
+    "@alaychak-hc/graphql-scalars": "^0.0.1",
     "@alaychak-hc/log-manager": "^1.0.0",
     "apollo-server-express": "^3.6.2",
     "class-validator": "^0.13.2",

@@ -5,8 +5,8 @@
     Email: ALaychak@harriscomputer.com
 
     Created At: 02-24-2022 02:52:42 PM
-    Last Modified: 02-24-2022 02:52:52 PM
-    Last Updated By: Andrew Laychak
+    Last Modified: 06-14-2022 03:28:46 PM
+    Last Updated By: Xlantra1
 
     Description: Exports all types making it easier to import a specific type from one file.
 
@@ -29,8 +29,9 @@
 // #region Imports
 import Notification from './Notification';
 import FileUpload from './File Upload';
+import UploadedFileDetails from './Upload File Details';
 // #endregion
 
 // #region Exports
-export { Notification, FileUpload };
+export { Notification, FileUpload, UploadedFileDetails };
 // #endregion
