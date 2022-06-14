@@ -9,8 +9,8 @@
     Email: ALaychak@harriscomputer.com
 
     Created At: 02-24-2022 02:18:05 PM
-    Last Modified: 02-25-2022 11:55:28 AM
-    Last Updated By: Andrew Laychak
+    Last Modified: 06-14-2022 12:41:09 PM
+    Last Updated By: Xlantra1
 
     Description: Resolver that handles retrieving Groups from the database
 
@@ -40,7 +40,7 @@ export class FileUploadResolver {
 
     const saveDirectory = process.env.UPLOAD_SAVE_DIRECTORY
       ? process.env.UPLOAD_SAVE_DIRECTORY
-      : path.join(__dirname, '../../uploads');
+      : path.join(process.cwd(), 'uploads');
 
     ensureDirSync(saveDirectory);
 

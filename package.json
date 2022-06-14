@@ -3,8 +3,9 @@
   "description": "The workspace for the GraphQL-Resolvers project",
   "private": true,
   "scripts": {
-    "publish:resolvers": "pnpm publish --filter @alaychak-hc/graphql-resolvers",
-    "build:resolvers": "pnpm build --filter @alaychak-hc/graphql-resolvers --filter=!./packages/resolvers/dist",
+    "publish:resolvers": "pnpm  --filter @alaychak-hc/graphql-resolvers publish",
+    "build:resolvers": "pnpm --filter @alaychak-hc/graphql-resolvers --filter=!./packages/resolvers/dist build",
+    "pack:resolvers": "pnpm  --filter @alaychak-hc/graphql-resolvers build:pack",
     "lint:staged": "pnpm run lint:staged -r --filter=!./packages/resolvers/dist",
     "contributors:add": "all-contributors add",
     "contributors:generate": "all-contributors generate",
