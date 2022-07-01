@@ -9,8 +9,8 @@
     Email: ALaychak@harriscomputer.com
 
     Created At: 02-24-2022 02:18:05 PM
-    Last Modified: 06-14-2022 12:41:09 PM
-    Last Updated By: Xlantra1
+    Last Modified: 06-28-2022 10:30:22 AM
+    Last Updated By: Andrew Laychak
 
     Description: Resolver that handles retrieving Groups from the database
 
@@ -22,11 +22,11 @@
 // #endregion
 
 // #region Imports
-import { Args, Mutation } from 'type-graphql';
-import { Resolver } from 'type-graphql/dist/decorators/Resolver';
-import { FileUploadArgs } from '@arguments/All';
-import { ensureDirSync, createWriteStream } from 'fs-extra';
+import { Resolver, Args, Mutation } from 'type-graphql';
+import { FileUploadArgs } from '@arguments/All.js';
+import { ensureDirSync } from 'fs-extra';
 import path from 'path';
+import fs from 'fs';
 import logManager from '@alaychak-hc/log-manager';
 import { ApolloError } from 'apollo-server-express';
 // #endregion
@@ -44,7 +44,7 @@ export class FileUploadResolver {
 
     ensureDirSync(saveDirectory);
 
-    const writableStream = createWriteStream(
+    const writableStream = fs.createWriteStream(
       `${saveDirectory}/${fileResolved.filename}`,
       {
         autoClose: true,

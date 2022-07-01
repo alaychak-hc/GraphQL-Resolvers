@@ -5,7 +5,7 @@
     Email: ALaychak@harriscomputer.com
 
     Created At: 02-24-2022 02:54:39 PM
-    Last Modified: 02-24-2022 02:54:52 PM
+    Last Modified: 06-28-2022 09:53:58 AM
     Last Updated By: Andrew Laychak
 
     Description: Helper file that contains all the arguments that various resolvers use.
@@ -27,8 +27,8 @@
 // #endregion
 
 // #region Imports
-import NotificationArgs from './Notification';
-import FileUploadArgs from './File Upload';
+import NotificationArgs from './Notification.js';
+import FileUploadArgs from './File Upload.js';
 // #endregion
 
 // #region Exports

@@ -5,7 +5,7 @@
     Email: ALaychak@harriscomputer.com
 
     Created At: 02-24-2022 02:53:00 PM
-    Last Modified: 02-24-2022 02:53:02 PM
+    Last Modified: 06-28-2022 09:55:55 AM
     Last Updated By: Andrew Laychak
 
     Description: The return type of the file upload resolver
@@ -17,8 +17,7 @@
 // #endregion
 
 // #region Imports
-import { Field } from 'type-graphql/dist/decorators/Field';
-import { ObjectType } from 'type-graphql/dist/decorators/ObjectType';
+import { Field, ObjectType } from 'type-graphql';
 // #endregion
 
 // #region File Upload

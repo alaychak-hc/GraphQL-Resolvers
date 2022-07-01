@@ -9,7 +9,7 @@
     Email: ALaychak@harriscomputer.com
 
     Created At: 02-24-2022 02:54:13 PM
-    Last Modified: 02-25-2022 11:50:19 AM
+    Last Modified: 06-28-2022 09:55:30 AM
     Last Updated By: Andrew Laychak
 
     Description: Resolver that handles notifications
@@ -22,6 +22,7 @@
 
 // #region Imports
 import {
+  Resolver,
   Args,
   Mutation,
   PubSub,
@@ -29,9 +30,8 @@ import {
   Root,
   Subscription,
 } from 'type-graphql';
-import { Resolver } from 'type-graphql/dist/decorators/Resolver';
-import { NotificationArgs } from '@arguments/All';
-import { Notification } from '@stypes/All';
+import { NotificationArgs } from '@arguments/All.js';
+import { Notification } from '@stypes/All.js';
 // #endregion
 
 // #region Notification Resolver

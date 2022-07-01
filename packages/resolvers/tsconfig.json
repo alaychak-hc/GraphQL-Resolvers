@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "esnext",
-    "module": "commonjs",
+    "module": "esnext",
     "lib": ["esnext", "esnext.asynciterable"],
     "inlineSourceMap": true,
     "declaration": true,
@@ -28,5 +28,6 @@
     "plugins": [{ "transform": "typescript-transform-paths" }],
     "types": ["node"]
   },
+  "include": ["src/**/*"],
   "exclude": ["node_modules", "dist", "knexfile.sample.*"]
 }

@@ -5,7 +5,7 @@
     Email: ALaychak@harriscomputer.com
 
     Created At: 02-24-2022 02:17:36 PM
-    Last Modified: 02-24-2022 02:48:01 PM
+    Last Modified: 06-28-2022 09:54:29 AM
     Last Updated By: Andrew Laychak
 
     Description: Exports all the resolvers to make it easier to import from one file instead of multiple files.
@@ -27,8 +27,8 @@
 // #endregion
 
 // #region Imports
-import NotificationResolver from './Notification';
-import FileUploadResolver from './File Upload';
+import NotificationResolver from './Notification.js';
+import FileUploadResolver from './File Upload.js';
 // #endregion
 
 // #region Exports
