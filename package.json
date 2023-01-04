@@ -82,7 +82,7 @@
   "dependencies": {
     "@alaychak-hc/eslint-config-monorepo": "^0.0.1",
     "all-contributors-cli": "^6.20.0",
-    "husky": "^7.0.4",
+    "husky": "^8.0.3",
     "lint-staged": "^11.2.6",
     "prettier": "^2.5.1"
   },
