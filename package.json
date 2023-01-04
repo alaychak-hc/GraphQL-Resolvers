@@ -3,7 +3,8 @@
   "description": "The workspace for the GraphQL-Resolvers project",
   "private": true,
   "scripts": {
-    "publish:resolvers": "pnpm  --filter @alaychak-hc/graphql-resolvers publish",
+    "publish:resolvers:local": "pnpm --filter @alaychak-hc/graphql-resolvers publish --dry-run --force --no-git-checks",
+    "publish:resolvers": "pnpm --filter @alaychak-hc/graphql-resolvers publish --force --no-git-checks",
     "build:resolvers": "pnpm --filter @alaychak-hc/graphql-resolvers --filter=!./packages/resolvers/dist build",
     "pack:resolvers": "pnpm  --filter @alaychak-hc/graphql-resolvers build:pack",
     "lint:staged": "pnpm run lint:staged -r --filter=!./packages/resolvers/dist",
@@ -13,8 +14,8 @@
     "prepare": "husky install"
   },
   "engines": {
-    "node": ">= 16.10.0",
-    "pnpm": ">= 6.15.0"
+    "node": ">= 18.0.0",
+    "pnpm": ">= 7.0.0"
   },
   "commitlint": {
     "extends": [
@@ -79,6 +80,7 @@
     ]
   },
   "dependencies": {
+    "@alaychak-hc/eslint-config-monorepo": "^0.0.1",
     "all-contributors-cli": "^6.20.0",
     "husky": "^7.0.4",
     "lint-staged": "^11.2.6",

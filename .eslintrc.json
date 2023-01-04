@@ -1,0 +1,52 @@
+{
+  "extends": ["@alaychak-hc/eslint-config-monorepo"],
+  "root": true,
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "overrides": [
+    {
+      "files": ["packages/resolvers/**/*.ts"],
+      "extends": [
+        // "@alaychak-hc/eslint-config-monorepo/base-with-formatting"
+        "@alaychak-hc/eslint-config-monorepo/node",
+        "@alaychak-hc/eslint-config-monorepo/ts"
+        // "@alaychak-hc/eslint-config-monorepo/graphql"
+      ],
+      "rules": {
+        "n/file-extension-in-import": "off",
+        "import/no-unused-modules": [
+          "error",
+          {
+            "unusedExports": true,
+            "ignoreExports": ["src/index.ts"]
+          }
+        ]
+      },
+      "parserOptions": {
+        "project": "./tsconfig.json",
+        "operations": "./packages/resolvers/src/**/*.{graphql,gql}",
+        "schema": "./packages/resolvers/schema.gql"
+      },
+      "settings": {
+        "import/resolver": {
+          "node": {
+            "moduleDirectory": [
+              "./packages/resolvers/node_modules",
+              "./packages/resolvers/src"
+            ]
+          },
+          "typescript": {
+            "project": "./packages/resolvers/tsconfig.json"
+          }
+        }
+      },
+      "env": {
+        "browser": false,
+        "node": true
+      }
+    }
+  ]
+}

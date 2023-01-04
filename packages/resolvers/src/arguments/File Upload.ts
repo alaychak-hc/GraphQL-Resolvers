@@ -5,7 +5,7 @@
     Email: ALaychak@harriscomputer.com
 
     Created At: 02-24-2022 02:56:35 PM
-    Last Modified: 02-24-2022 02:56:42 PM
+    Last Modified: 01-04-2023 11:30:30 AM
     Last Updated By: Andrew Laychak
 
     Description: Arguments for the file upload resolver
@@ -17,7 +17,8 @@
 // #endregion
 
 // #region Imports
-import { GraphQLUpload, FileUpload } from 'graphql-upload';
+import GraphQLUpload from 'graphql-upload/GraphQLUpload.mjs';
+import type { FileUpload } from 'graphql-upload/processRequest.mjs';
 import { ArgsType, Field } from 'type-graphql';
 // #endregion
 
@@ -27,6 +28,7 @@ import { ArgsType, Field } from 'type-graphql';
  */
 @ArgsType()
 class FileUploadArgs {
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-return
   @Field(() => GraphQLUpload, {
     name: 'file',
     description: 'The file to be upload',
