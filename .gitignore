@@ -27,3 +27,6 @@ notes.txt
 
 # Ignore .DS_Store files
 .DS_Store
+
+# Ignore lib output folder
+lib

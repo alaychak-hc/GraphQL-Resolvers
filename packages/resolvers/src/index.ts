@@ -5,7 +5,7 @@
     Email: ALaychak@harriscomputer.com
 
     Created At: 02-24-2022 03:06:48 PM
-    Last Modified: 06-28-2022 09:56:14 AM
+    Last Modified: 11-06-2023 04:45:57 PM
     Last Updated By: Andrew Laychak
 
     Description: Index file for the resolvers package
@@ -17,6 +17,7 @@
 // #endregion
 
 // #region Imports
+import 'reflect-metadata';
 import { NotificationResolver, FileUploadResolver } from './resolvers/All.js';
 // #endregion
 
